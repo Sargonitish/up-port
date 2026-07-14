@@ -1,0 +1,10 @@
+node_modules
+dist
+*.local
+.DS_Store
+Thumbs.db
+
+# Large files
+New%20folder/
+*.pdf
+complted.txt

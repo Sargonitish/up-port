@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nitish S | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Syne:wght@800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- Glitch Easter Egg Overlay -->
+  <div id="glitch-overlay" aria-hidden="true">
+    <h1>SYSTEM_OVERRIDE</h1>
+    <p>IDENTIFIED: NITISH S // STUDENT DEVELOPER ACCESS GRANTED.</p>
+    <p>Press 'ESC' to return.</p>
+  </div>
+
+  <!-- Certification Modal -->
+  <div id="cert-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="close-btn" aria-label="Close">&times;</button>
+      <div class="modal-badge">[ CERTIFICATION_DATA ]</div>
+      <h2 id="modal-title">Title</h2>
+      <div class="modal-issuer" id="modal-issuer">Issuer</div>
+      <h3>Knowledge Gain:</h3>
+      <p id="modal-skills"></p>
+      <button id="view-cert-btn" class="btn btn-primary btn-full">VIEW CERTIFICATE</button>
+      <div id="modal-img-container" class="modal-img-container">
+        <button id="modal-arrow-left" class="modal-arrow" aria-label="Previous image">&larr;</button>
+        <img id="modal-cert-img" src="" alt="Certificate" />
+        <button id="modal-arrow-right" class="modal-arrow" aria-label="Next image">&rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-brand">
+      <span class="nav-logo">PORTFOLIO</span>
+      <span class="nav-brand-text">Nitish S</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#certs">Certs</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#events">Events</a>
+      <a href="#activities">Activities</a>
+      <a href="#team">Team</a>
+    </div>
+    <div class="nav-actions">
+      <button id="themeToggle" aria-label="Toggle theme">MODE</button>
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div id="mobileOverlay" class="mobile-overlay" role="dialog" aria-modal="true">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#certs">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#events">Events</a>
+    <a href="#activities">Activities</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <h1><span class="text-gradient">NITISH S</span><br />Student Developer</h1>
+      <p class="hero-sub">&gt; Curious Learner &amp; Problem Solver</p>
+      <div class="hero-actions">
+        <a href="Nitish_S_CV.pdf" download class="btn btn-primary">
+          <span aria-hidden="true">&darr;</span> DOWNLOAD RESUME
+        </a>
+        <a href="mailto:nitiships14@gmail.com" class="btn btn-secondary">
+          CONTACT ME
+        </a>
+      </div>
+      <div class="terminal" role="log" aria-label="Terminal output">
+        <div class="terminal-header">
+          <span class="dot" style="background:var(--red)"></span>
+          <span class="dot" style="background:var(--yellow)"></span>
+          <span class="dot" style="background:var(--green)"></span>
+        </div>
+        <div class="terminal-body">
+          <div><span class="prompt">&gt;</span> <span id="typewriter"></span><span class="cursor" aria-hidden="true">&#9608;</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="reveal">
+    <h2 class="section-title" style="--st-bg:var(--pink);--st-color:black">About_Me</h2>
+    <p class="about-text">I'm an engineering student who enjoys exploring technology and building things through coding and programming. I'm interested in artificial intelligence, software systems, and understanding how different technologies work together. I enjoy writing code, working on projects, participating in hackathons, and constantly improving my technical and problem-solving skills.</p>
+    <div class="learning-box">
+      <span class="learning-label">&gt; Currently_Learning:</span><br />
+      Learning about life, Technology, and the important lessons that come with both.
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certs" class="reveal">
+    <div class="section-header">
+      <h2 class="section-title" style="--st-bg:var(--purple);--st-color:white">Learning Milestones</h2>
+    </div>
+    <div class="carousel-container" data-carousel="cert">
+      <button class="nav-arrow left-arrow" aria-label="Scroll left">&larr;</button>
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <!-- Existing certs -->
+          <div class="event-card" data-title="Basics of Electronics and Embedded System" data-issuer="Indian Institute of Technology Madras" data-skills="This workshop provided me with a strong foundation in electronics and embedded systems, including basic circuit concepts, microcontroller programming, and practical applications in real-world electronic systems." data-images='["iitm.webp","iitmphoto.webp"]'>
+            <h3>Basics of Electronics and Embedded System</h3>
+            <p><strong>Issuer:</strong> IIT Madras</p>
+            <p class="card-date">Jan 5-9, 2026</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="Basics of Electronics and Embedded System" data-issuer="Indian Institute of Technology Madras" data-skills="This workshop provided me with a strong foundation in electronics and embedded systems." data-images='["iitm-23.webp"]'>
+            <h3>Basics of Electronics and Embedded System</h3>
+            <p><strong>Issuer:</strong> IIT Madras</p>
+            <p class="card-date">May 15-19, 2023</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="PrompyCraft" data-issuer="Chennai Institute of Technology" data-skills="Participated in ZORPHIX 2026 at Chennai Institute of Technology." data-images='["citzopphx.webp"]'>
+            <h3>PrompyCraft</h3>
+            <p><strong>Issuer:</strong> Chennai Institute of Technology</p>
+            <p class="card-date">Feb 5, 2026</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="Tehnisys" data-issuer="Sai Ram Engineering College" data-skills="Certificate of Participation from Sai Ram Engineering College, IEEE IES EVODGE 2.0." data-images='["saiamtechnisys.webp"]'>
+            <h3>Tehnisys</h3>
+            <p><strong>Issuer:</strong> Sai Ram Engineering College</p>
+            <p class="card-date">Dec 10, 2026</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="Summer Internship Program - Future Frontiers" data-issuer="St. Joseph's Institute of Technology" data-skills="Completed Summer Internship focused on Future Frontiers: The Science of Tomorrow." data-images='["sjitff.webp"]'>
+            <h3>Summer Internship - Future Frontiers</h3>
+            <p><strong>Issuer:</strong> St. Joseph's Institute of Technology</p>
+            <p class="card-date">Mar 7-11, 2025</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="Summer Internship Program - Robotics and IOT" data-issuer="St. Joseph's Institute of Technology" data-skills="Completed internship on Robotics and IoT, gaining practical exposure to automation systems." data-images='["sjitiot.webp"]'>
+            <h3>Summer Internship - Robotics &amp; IoT</h3>
+            <p><strong>Issuer:</strong> St. Joseph's Institute of Technology</p>
+            <p class="card-date">April 1-5, 2025</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="STEM-Based Summer Internship - EV Technology" data-issuer="St. Joseph's Institute of Technology" data-skills="Completed STEM-Based Summer Internship in Electric Vehicle Technology." data-images='["stitev.webp"]'>
+            <h3>STEM Internship - EV Technology</h3>
+            <p><strong>Issuer:</strong> St. Joseph's Institute of Technology</p>
+            <p class="card-date">April 21 - May 2, 2025</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="Futuristic Expo 2K26" data-issuer="Tagore Engineering College" data-skills="Participated in National Science Day - Tec Futuristic Expo 2k26." data-images='["tagorefuturisticexpo.webp"]'>
+            <h3>Futuristic Expo 2K26</h3>
+            <p><strong>Issuer:</strong> Tagore Engineering College</p>
+            <p class="card-date">March 3, 2026</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="TEC Ideathon" data-issuer="Tagore Engineering College" data-skills="Participated in TEC Ideathon hosted by Tagore Engineering College." data-images='["tagoreideathon26.webp"]'>
+            <h3>TEC Ideathon</h3>
+            <p><strong>Issuer:</strong> Tagore Engineering College</p>
+            <p class="card-date">January 2026</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="Fireless Cooking Competition" data-issuer="College Cultural Fest" data-skills="Awarded for creative presentation and resourcefulness in assembling dishes without heat." data-images='["tagorefirelesscooking.webp"]'>
+            <h3>Fireless Cooking Winner</h3>
+            <p><strong>Issuer:</strong> College Cultural Fest</p>
+            <p class="card-date">2025</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="Karate Belt Certification" data-issuer="State Martial Arts Association" data-skills="Demonstrated discipline, combat techniques, and endurance." data-images='["karate21.webp"]'>
+            <h3>Karate Belt Certification</h3>
+            <p><strong>Issuer:</strong> State Martial Arts Association</p>
+            <p class="card-date">2021</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <!-- Placeholder certs -->
+          <div class="event-card" data-title="[OSPC — Placeholder Title]" data-issuer="[Placeholder Issuer]" data-skills="[Placeholder: Description of what was learned and accomplished in this certification.]" data-images='["New%20folder/NITISH_SAGADEVAN__OSPC.png"]'>
+            <h3>[OSPC — Placeholder Title]</h3>
+            <p><strong>Issuer:</strong> [Placeholder Issuer]</p>
+            <p class="card-date">[Placeholder Date]</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="[Poster Making — Placeholder Title]" data-issuer="[Placeholder Issuer]" data-skills="[Placeholder: Description of this poster making achievement.]" data-images='["New%20folder/NITISH_SAGADEVAN__POSTER_MAKING.png"]'>
+            <h3>[Poster Making — Placeholder]</h3>
+            <p><strong>Issuer:</strong> [Placeholder Issuer]</p>
+            <p class="card-date">[Placeholder Date]</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="[Ultimate Line Tracer — Placeholder Title]" data-issuer="[Placeholder Issuer]" data-skills="[Placeholder: Description of this line tracing/robotics achievement.]" data-images='["New%20folder/NITISH_SAGADEVAN__ULTIMATE_LINE_TRACER.png"]'>
+            <h3>[Line Tracer — Placeholder]</h3>
+            <p><strong>Issuer:</strong> [Placeholder Issuer]</p>
+            <p class="card-date">[Placeholder Date]</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="[Server Surfers — Placeholder Title]" data-issuer="[Placeholder Issuer]" data-skills="[Placeholder: Description of this server/systems achievement.]" data-images='["New%20folder/NITISH_Server_Surfers.png"]'>
+            <h3>[Server Surfers — Placeholder]</h3>
+            <p><strong>Issuer:</strong> [Placeholder Issuer]</p>
+            <p class="card-date">[Placeholder Date]</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+          <div class="event-card" data-title="[VIT Ideathon — Placeholder Title]" data-issuer="[Placeholder Issuer]" data-skills="[Placeholder: Description of this ideathon participation.]" data-images='["New%20folder/Vit%20idea-thon.jpg"]'>
+            <h3>[VIT Ideathon — Placeholder]</h3>
+            <p><strong>Issuer:</strong> [Placeholder Issuer]</p>
+            <p class="card-date">[Placeholder Date]</p>
+            <span class="click-hint">[ CLICK TO VIEW ]</span>
+          </div>
+        </div>
+      </div>
+      <button class="nav-arrow right-arrow" aria-label="Scroll right">&rarr;</button>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="reveal">
+    <h2 class="section-title" style="--st-bg:var(--cyan);--st-color:black">Core_Projects</h2>
+    <div class="grid">
+      <div class="card card-tilt">
+        <h3>NeuroEdu Platform</h3>
+        <p>Architecting an AI-powered educational app to improve student focus and productivity metrics.</p>
+        <a href="https://github.com/Sargonitish" target="_blank" rel="noopener noreferrer" class="btn btn-primary">VIEW REPO</a>
+      </div>
+      <div class="card card-tilt">
+        <h3>Visual Assist Device</h3>
+        <p>Developing a smart hardware device that maps environments for the visually impaired using sensor-driven logic.</p>
+        <a href="https://github.com/Sargonitish" target="_blank" rel="noopener noreferrer" class="btn btn-primary">VIEW REPO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="reveal">
+    <h2 class="section-title" style="--st-bg:var(--yellow);--st-color:black">Skill_Metrics</h2>
+    <div class="skills-container">
+      <div class="skill-row" data-percent="85">
+        <div class="skill-label">
+          <span>React.js &amp; Tailwind CSS</span>
+          <span class="skill-pct" style="color:var(--pink)">0%</span>
+        </div>
+        <div class="bar-bg"><div class="bar-fill" style="background:var(--pink)"></div></div>
+      </div>
+      <div class="skill-row" data-percent="80">
+        <div class="skill-label">
+          <span>Node.js, Express &amp; MongoDB</span>
+          <span class="skill-pct" style="color:var(--green)">0%</span>
+        </div>
+        <div class="bar-bg"><div class="bar-fill" style="background:var(--green)"></div></div>
+      </div>
+      <div class="skill-row" data-percent="75">
+        <div class="skill-label">
+          <span>Hardware Integration Logic</span>
+          <span class="skill-pct" style="color:var(--purple)">0%</span>
+        </div>
+        <div class="bar-bg"><div class="bar-fill" style="background:var(--purple)"></div></div>
+      </div>
+      <div class="skill-row" data-percent="70">
+        <div class="skill-label">
+          <span>Python &amp; AI/ML Fundamentals</span>
+          <span class="skill-pct" style="color:var(--cyan)">0%</span>
+        </div>
+        <div class="bar-bg"><div class="bar-fill" style="background:var(--cyan)"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="reveal">
+    <h2 class="section-title" style="--st-bg:var(--blue);--st-color:white">Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">April 21 - May 2, 2025</div>
+        <div class="timeline-title">STEM-Based Summer Internship</div>
+        <div class="timeline-org">St. Joseph's Institute of Technology</div>
+        <p>Electric Vehicle Technology &mdash; recognized for dedication to emerging engineering fields.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">April 1-5, 2025</div>
+        <div class="timeline-title">Summer Internship &mdash; Robotics &amp; IoT</div>
+        <div class="timeline-org">St. Joseph's Institute of Technology (CSE Dept.)</div>
+        <p>Gained practical exposure to automation systems, sensor integration, and connected technologies.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Mar 7-11, 2025</div>
+        <div class="timeline-title">Summer Internship &mdash; Future Frontiers</div>
+        <div class="timeline-org">St. Joseph's Institute of Technology (with Altrosyn Technologies)</div>
+        <p>Hands-on exposure to Artificial Intelligence and Data Science concepts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="events" class="reveal">
+    <div class="section-header">
+      <h2 class="section-title" style="--st-bg:var(--red);--st-color:white">Competitive_Builds</h2>
+    </div>
+
+    <h3 class="carousel-title" style="--ct-color:var(--pink)">Hackathons</h3>
+    <div class="carousel-container" data-carousel="hackathons">
+      <button class="nav-arrow left-arrow" aria-label="Scroll left">&larr;</button>
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <div class="event-card">
+            <h3>Global Tech Hackathon</h3>
+            <ul>
+              <li><strong>Problem:</strong> Smart City Optimization</li>
+              <li><strong>Tech:</strong> React, Python</li>
+              <li><strong>Result:</strong> Finalist</li>
+            </ul>
+            <span class="click-hint">[ FINALIST ]</span>
+          </div>
+          <div class="event-card">
+            <h3>Hardware Sprint</h3>
+            <ul>
+              <li><strong>Problem:</strong> Accessibility in physical spaces</li>
+              <li><strong>Tech:</strong> Sensors, Microcontrollers</li>
+              <li><strong>Result:</strong> Best Hardware Hack</li>
+            </ul>
+            <span class="click-hint">[ BEST HARDWARE HACK ]</span>
+          </div>
+          <div class="event-card">
+            <h3>AI for Quality Education</h3>
+            <ul>
+              <li><strong>Duration:</strong> 24-Hour Hackathon</li>
+              <li><strong>Focus:</strong> Scaling quality via AI</li>
+              <li><strong>Project:</strong> NeuroEdu Architecture</li>
+            </ul>
+            <span class="click-hint">[ PARTICIPANT ]</span>
+          </div>
+        </div>
+      </div>
+      <button class="nav-arrow right-arrow" aria-label="Scroll right">&rarr;</button>
+    </div>
+
+    <h3 class="carousel-title" style="--ct-color:var(--green)">Ideathons</h3>
+    <div class="carousel-container" data-carousel="ideathons">
+      <button class="nav-arrow left-arrow" aria-label="Scroll left">&larr;</button>
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <div class="event-card">
+            <h3>Future Systems Ideathon</h3>
+            <ul>
+              <li><strong>Date:</strong> Jan 2026</li>
+              <li><strong>Problem:</strong> Next-Gen education tools</li>
+              <li><strong>Result:</strong> Honorable Mention</li>
+            </ul>
+            <span class="click-hint">[ HONORABLE MENTION ]</span>
+          </div>
+          <div class="event-card">
+            <h3>Web3 &amp; Future Tech</h3>
+            <ul>
+              <li><strong>Date:</strong> Feb 2026</li>
+              <li><strong>Problem:</strong> Decentralized Records</li>
+              <li><strong>Result:</strong> Participant</li>
+            </ul>
+            <span class="click-hint">[ PARTICIPANT ]</span>
+          </div>
+        </div>
+      </div>
+      <button class="nav-arrow right-arrow" aria-label="Scroll right">&rarr;</button>
+    </div>
+  </section>
+
+  <!-- Activities -->
+  <section id="activities" class="reveal">
+    <div class="section-header">
+      <h2 class="section-title" style="--st-bg:var(--cyan);--st-color:black">Beyond The Screen</h2>
+    </div>
+    <div class="carousel-container" data-carousel="activities">
+      <button class="nav-arrow left-arrow" aria-label="Scroll left">&larr;</button>
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <div class="activity-card">
+            <div class="activity-icon" style="background:var(--red);color:white">&#129355;</div>
+            <h3 class="activity-title" style="color:var(--red)">Karate</h3>
+            <p class="activity-desc">Discipline, focus, and physical endurance. Training in martial arts helps me maintain a clear mindset and sharp reflexes, which directly translates to how I approach complex problem-solving.</p>
+            <div class="activity-tag" style="color:var(--red)">// PHYSICAL_LOGIC</div>
+          </div>
+          <div class="activity-card">
+            <div class="activity-icon" style="background:var(--yellow);color:black">&#129481;</div>
+            <h3 class="activity-title" style="color:var(--blue)">Fireless Cooking</h3>
+            <p class="activity-desc">Resourcefulness at its best. Pushes me to think creatively within strict constraints, assembling ingredients to build something great without standard tools.</p>
+            <div class="activity-tag" style="color:var(--blue)">// CREATIVE_ASSEMBLY</div>
+          </div>
+          <div class="activity-card">
+            <div class="activity-icon" style="background:var(--green);color:black">&#128506;</div>
+            <h3 class="activity-title" style="color:var(--purple)">Treasure Hunt</h3>
+            <p class="activity-desc">Real-world algorithmic pathfinding. I love deciphering clues, optimizing routes, and working closely with a team under time pressure to reach the objective.</p>
+            <div class="activity-tag" style="color:var(--purple)">// EVENT_ROUTING</div>
+          </div>
+          <div class="activity-card">
+            <div class="activity-icon" style="background:var(--cyan);color:black">&#127946;</div>
+            <h3 class="activity-title" style="color:var(--cyan)">Swimming</h3>
+            <p class="activity-desc">Building stamina and perfecting technique. Provides a meditative space to clear my mind, teaching me the value of pacing and consistent breathing under pressure.</p>
+            <div class="activity-tag" style="color:var(--cyan)">// AQUATIC_ENDURANCE</div>
+          </div>
+        </div>
+      </div>
+      <button class="nav-arrow right-arrow" aria-label="Scroll right">&rarr;</button>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="reveal">
+    <h2 class="section-title" style="--st-bg:var(--green);--st-color:black">Education</h2>
+    <div class="edu-box">
+      <h3>Tagore Engineering College</h3>
+      <p class="edu-meta">// B.E. Computer Science Engineering &mdash; 1st Year (Present)</p>
+      <p>Focus on scalable web systems, data structures, and hardware-software interaction.</p>
+    </div>
+    <div class="edu-box">
+      <h3>Prince Matriculation Higher Secondary School</h3>
+      <p class="edu-meta">// Completed Higher Secondary Education</p>
+      <p>Foundational focus on computation logic and science.</p>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="reveal">
+    <h2 class="section-title" style="--st-bg:var(--yellow);--st-color:black">Core_Team</h2>
+    <p class="team-intro">Engineering is a collaborative effort. These are the minds helping to build the architecture for NeuroEdu and hackathon prototypes.</p>
+    <div class="grid">
+      <div class="card card-tilt">
+        <div class="team-avatar">&#129489;</div>
+        <h3>[Team Member Name]</h3>
+        <div class="team-role">// AI &amp; Data Engineer</div>
+        <p>Specializes in building machine learning pipelines and AI-powered systems.</p>
+        <a href="#" class="team-link">[ GitHub Profile ]</a>
+      </div>
+      <div class="card card-tilt">
+        <div class="team-avatar">&#129469;</div>
+        <h3>[Team Member Name]</h3>
+        <div class="team-role" style="color:var(--red)">// UI/UX &amp; Frontend</div>
+        <p>Creates intuitive user experiences and modern responsive interfaces.</p>
+        <a href="#" class="team-link">[ GitHub Profile ]</a>
+      </div>
+      <div class="card card-tilt">
+        <div class="team-avatar">&#129497;</div>
+        <h3>[Team Member Name]</h3>
+        <div class="team-role" style="color:var(--blue)">// Hardware Specialist</div>
+        <p>Leads hardware integration, sensors, prototyping, and embedded systems.</p>
+        <a href="#" class="team-link">[ GitHub Profile ]</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="reveal">
+    <div class="contact-card">
+      <h2 class="section-title" style="--st-bg:var(--red);--st-color:white">Initialize_Contact</h2>
+      <p>Ready to engineer the next solution?</p>
+      <a href="mailto:nitiships14@gmail.com" class="btn btn-primary btn-large">TRANSMIT_EMAIL</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h2>NITISH.S</h2>
+    <div class="footer-links">
+      <a href="https://github.com/Sargonitish" target="_blank" rel="noopener noreferrer">GITHUB</a>
+      <a href="https://www.linkedin.com/in/nitish-ping-perfect" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+      <a href="https://www.sargonitish.xo.je" target="_blank" rel="noopener noreferrer">PORTFOLIO</a>
+    </div>
+    <div class="v-count" id="v-count">Visitor #0</div>
+    <p class="footer-copy">&copy; 2026 Nitish S // Chennai, India</p>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
